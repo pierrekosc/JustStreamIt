@@ -168,6 +168,7 @@ section {
   padding: 1rem 1.25rem 0.75rem;
   background: rgba(0, 0, 0, 0.5);
   color: #fff;
+  pointer-events: none;
 }
 
 .movie-card__title {
@@ -180,6 +181,7 @@ section {
   padding: 0.1rem 1.5rem;
   background: var(--dark-grey);
   font-size: 0.875rem;
+  pointer-events: auto;
 }
 
 /* mobile : seuls les 2 premiers films sont visibles */
