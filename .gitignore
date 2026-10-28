@@ -1,0 +1,10 @@
+# API OCMovies clonée localement (dépôt séparé, ne pas versionner ici)
+OCMovies-API-EN-FR/
+
+# macOS
+.DS_Store
+._*
+
+# Éditeurs
+.vscode/
+.idea/

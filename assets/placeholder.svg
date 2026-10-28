@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="240" height="360" viewBox="0 0 240 360" role="img" aria-label="Affiche indisponible">
+  <rect width="240" height="360" fill="#d9d9d9"/>
+  <path d="M120 150a24 24 0 1 1 0 48 24 24 0 0 1 0-48zm-60 90 40-44 26 28 30-34 44 50z" fill="#a6a6a6"/>
+  <text x="120" y="272" text-anchor="middle" font-family="Oswald, sans-serif" font-size="16" fill="#737373">
+    Affiche indisponible
+  </text>
+</svg>

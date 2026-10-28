@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="JustStreamIt : classement de films à partir de l'API OCMovies.">
+  <title>JustStreamIt</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <header class="header">
+    <img class="header__logo" src="assets/logo.png" alt="JustStreamIt">
+    <p class="header__text">Vidéos à la demande</p>
+  </header>
+
+  <main>
+
+    <p id="error" class="error" hidden></p>
+
+    <!-- Meilleur film -->
+    <section class="best-movie">
+      <h1>Meilleur film</h1>
+      <div class="best-movie__card">
+        <img class="best-movie__img" src="assets/placeholder.svg" alt="">
+        <div class="best-movie__text">
+          <h2 class="best-movie__title">Chargement...</h2>
+          <p class="best-movie__summary"></p>
+          <button type="button" class="btn btn--red best-movie__btn">Détails</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Films les mieux notés, toutes catégories -->
+    <section id="top-rated" class="movies">
+      <h2>Films les mieux notés</h2>
+      <ul class="movies__grid"></ul>
+      <button type="button" class="btn btn--red movies__more">Voir plus</button>
+    </section>
+
+    <!-- Catégories 1 et 2 : le genre est lu dans data-genre par le JS -->
+    <section class="movies" data-genre="Mystery">
+      <h2>Mystery</h2>
+      <ul class="movies__grid"></ul>
+      <button type="button" class="btn btn--red movies__more">Voir plus</button>
+    </section>
+
+    <section class="movies" data-genre="Sci-Fi">
+      <h2>Sci-Fi</h2>
+      <ul class="movies__grid"></ul>
+      <button type="button" class="btn btn--red movies__more">Voir plus</button>
+    </section>
+
+    <!-- Autres : catégorie choisie dans la liste déroulante -->
+    <section id="other" class="movies">
+      <div class="movies__choice">
+        <h2 id="other-title">Autres:</h2>
+        <div class="select">
+          <select id="genre-select" aria-labelledby="other-title"></select>
+        </div>
+      </div>
+      <ul class="movies__grid"></ul>
+      <button type="button" class="btn btn--red movies__more">Voir plus</button>
+    </section>
+
+  </main>
+
+  <!-- Fenêtre modale : détail d'un film -->
+  <dialog id="modal" class="modal" aria-labelledby="modal-title">
+    <button type="button" class="modal__cross" aria-label="Fermer">❌</button>
+
+    <div class="modal__infos">
+      <h2 id="modal-title" class="modal__title">Titre</h2>
+      <p id="modal-year-genres" class="modal__line"></p>
+      <p id="modal-rated-duration" class="modal__line"></p>
+      <p id="modal-score" class="modal__line"></p>
+      <p id="modal-box-office" class="modal__line"></p>
+      <p class="modal__label">Réalisé par:</p>
+      <p id="modal-directors" class="modal__light"></p>
+    </div>
+
+    <p id="modal-summary" class="modal__summary"></p>
+
+    <!-- sous le résumé sur mobile, remontée en haut à droite sur ordinateur (CSS) -->
+    <img id="modal-img" class="modal__img" src="assets/placeholder.svg" alt="">
+
+    <div class="modal__actors">
+      <p class="modal__label">Avec:</p>
+      <p id="modal-actors" class="modal__light"></p>
+    </div>
+
+    <button type="button" class="btn btn--red modal__btn">Fermer</button>
+  </dialog>
+
+  <script src="js/api.js"></script>
+  <script src="js/ui.js"></script>
+  <script src="js/script.js"></script>
+</body>
+</html>
