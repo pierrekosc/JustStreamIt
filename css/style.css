@@ -28,7 +28,7 @@ img {
   max-width: 100%;
 }
 
-h1,
+.best-movie__title,
 h2 {
   margin-bottom: 1rem;
   font-size: 2rem;
@@ -311,7 +311,7 @@ section {
 
 /* ===== Tablette : 2 films par ligne, 4 visibles ===== */
 @media (min-width: 768px) {
-  h1,
+  .best-movie__title,
   h2 {
     font-size: 2.5rem;
     text-align: left;
@@ -373,7 +373,7 @@ section {
 
 /* ===== Ordinateur : 3 films par ligne, 6 visibles ===== */
 @media (min-width: 1024px) {
-  h1,
+  .best-movie__title,
   h2 {
     font-size: 3rem;
   }
